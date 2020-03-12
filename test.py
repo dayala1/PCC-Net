@@ -107,6 +107,7 @@ def test(file_list, model_path,roi):
             img = np.hstack((img,pad))
             img = Image.fromarray(img.astype(np.uint8))
             den = np.hstack((den,pad))
+            wd_1 = cfg.DATA.STD_SIZE[1]
             
         if ht_1 < cfg.DATA.STD_SIZE[0]:
             dif = cfg.DATA.STD_SIZE[0] - ht_1
